@@ -2,7 +2,27 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        neutral: {
+          white: '#ffffff',
+          gray: '#dddddd',
+          charcoal: '#222222',
+          'cool-gray': '#869bad',
+        },
+        accent: {
+          'royal-blue': '#325baf',
+        },
+        brand: {
+          green: '#04d166',
+          'dark-navy': '#0d365a',
+          'sky-blue': '#21cefd',
+          'ice-blue': '#edf3ff',
+          'royal-blue': '#315baf',
+          'mint-light': '#eefff5',
+        },
+      },
+    },
   },
   plugins: [],
-};
+}

@@ -1,21 +1,9 @@
-function App() {
+const App = () => {
   return (
-    <div className="App rounded-lg bg-blue-500 p-4 text-white">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex h-screen bg-brand-dark-navy text-neutral-white">
+      App
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
