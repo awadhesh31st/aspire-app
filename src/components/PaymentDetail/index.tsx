@@ -16,11 +16,11 @@ const PaymentDetailComponent = () => {
             )
           })}
         </div>
-        <div className="mx-5 rounded-lg border border-gray-100 bg-brand-royal-light-blue px-4 py-3 shadow-card">
+        <div className="shadow-01 mx-5 rounded-lg border border-gray-100 bg-[#fafcff] px-4 py-3 text-brand-dark-navy">
           <paymentDetail.cardDetail.icon />
           <span>{paymentDetail.cardDetail.title}</span>
         </div>
-        <div className="mx-5 rounded-lg border border-gray-100 bg-brand-royal-light-blue px-4 py-3 shadow-card">
+        <div className="shadow-01 mx-5 rounded-lg border border-gray-100 bg-[#fafcff] px-4 py-3 text-brand-dark-navy">
           <paymentDetail.recentTransaction.icon />
           <span>{paymentDetail.recentTransaction.title}</span>
         </div>
