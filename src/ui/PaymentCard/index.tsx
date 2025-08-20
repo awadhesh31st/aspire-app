@@ -15,17 +15,17 @@ const PaymentCardComponent: FC<PaymentCard> = memo((props) => {
     : props.number
 
   return (
-    <div className="m-0 flex w-full flex-col" data-card-id={props.customerId}>
+    <div className="flex w-full flex-col" data-card-id={props.customerId}>
       <div className="flex-end flex w-full items-center justify-end border-none bg-brand-dark-navy">
-        <div className="flex items-center justify-start gap-2 rounded-t-lg bg-white px-3 py-1 text-xs font-medium text-brand-green">
+        <div className="flex items-center justify-start gap-2 rounded-t-xl bg-white px-3 py-1 text-xs font-medium text-brand-green">
           <Icon className="size-4" />
           <button onClick={handleToggleCardNumber} type="button">
             {!showCardNumber ? cardAction.hideTitle : cardAction.showTitle}
           </button>
         </div>
       </div>
-      <div className="rounded-b-lg rounded-tl-lg border-none bg-white">
-        <div className="flex flex-col gap-1 rounded-lg bg-brand-green px-4 pt-4">
+      <div className="rounded-b-xl rounded-tl-xl border-none bg-white">
+        <div className="flex flex-col gap-1 rounded-xl bg-brand-green px-4 pt-4">
           <span className="mb-4 flex items-center justify-end">
             <img
               src={props.cardVander}

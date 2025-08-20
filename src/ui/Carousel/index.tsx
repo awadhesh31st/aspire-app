@@ -59,7 +59,7 @@ const CarouselComponent: FC<Carousel> = ({ children, items }) => {
     <div className="w-full">
       <div className="relative overflow-hidden">
         <div
-          className="flex"
+          className="flex w-11/12"
           style={containerStyle}
           onTouchStart={handleTouchStart}
         >

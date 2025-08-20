@@ -4,15 +4,18 @@ import CarouselComponent from '../../../ui/Carousel'
 
 const CardListComponent: FC<CardList> = ({ cards }) => {
   return (
-    <div>
-      <CarouselComponent items={cards}>
-        {cards.map((card: PaymentCard) => (
-          <div key={card.customerId} className="w-full flex-shrink-0">
+    <CarouselComponent items={cards}>
+      {cards.map((card: PaymentCard) => (
+        <div
+          key={card.customerId}
+          className={`flex w-full flex-shrink-0 justify-end`}
+        >
+          <div className="flex w-[96%]">
             <PaymentCardComponent {...card} />
           </div>
-        ))}
-      </CarouselComponent>
-    </div>
+        </div>
+      ))}
+    </CarouselComponent>
   )
 }
 

@@ -28,9 +28,9 @@ const CardComponent = memo(() => {
   )
 
   return (
-    <div className="flex flex-col gap-8 px-4">
+    <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-5">
-        <div className="flex items-center justify-start gap-5">
+        <div className="flex items-center justify-start gap-5 px-4">
           {tabs.map(({ type, title }) => (
             <TabButtonComponent
               key={type}
@@ -46,7 +46,5 @@ const CardComponent = memo(() => {
     </div>
   )
 })
-
-CardComponent.displayName = 'CardComponent'
 
 export default CardComponent

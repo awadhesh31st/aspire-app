@@ -32,7 +32,7 @@ const NavigationComponent = memo(() => {
   }, [])
 
   return (
-    <div className="shadow-brand-top fixed bottom-0 w-full justify-center bg-white px-4 md:relative md:w-auto md:border-0 md:px-0">
+    <div className="fixed bottom-0 z-[100] w-full justify-center bg-white px-4 shadow-2xl md:relative md:w-auto md:border-0 md:px-0">
       <nav className="flex w-full flex-row items-end justify-between gap-4 md:flex-col md:gap-0">
         {navigationItems}
       </nav>

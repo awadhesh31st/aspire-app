@@ -67,3 +67,7 @@ type CarouselDots = {
   current: number
   onDotClick: (index: number) => void
 }
+
+type PaymentCardHandle = {
+  toggleCardNumber: () => void
+}
