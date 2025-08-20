@@ -9,13 +9,13 @@ const HeaderComponent = () => {
       </div>
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-start gap-2">
-          <span className="flex items-center justify-center rounded-md bg-brand-green px-3 py-0.5 text-xs font-medium text-white">
+          <span className="flex items-center justify-center rounded-[3px] bg-brand-green px-3 py-0.5 text-[10px] font-medium text-white">
             {header.balance.currency}
           </span>
           <span className="text-base font-bold">{header.balance.amount}</span>
         </div>
-        <button className="flex items-center justify-between gap-2 text-sm text-brand-sky-blue">
-          <header.addCardButton.icon className="inline-block size-4 md:size-4" />
+        <button className="flex items-center justify-between gap-1.5 text-xs text-brand-sky-blue">
+          <header.addCardButton.icon className="inline-block size-3 md:size-4" />
           <span className="font-semibold">{header.addCardButton.text}</span>
         </button>
       </div>

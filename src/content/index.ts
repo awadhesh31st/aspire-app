@@ -1,7 +1,7 @@
 import { aspireGreenLogo, aspireLogo } from '../assets'
 import { BsCreditCardFill } from 'react-icons/bs'
 import { FaUser, FaArrowCircleUp } from 'react-icons/fa'
-import { BiTransferAlt, BiLogoMastercard } from 'react-icons/bi'
+import { BiTransferAlt } from 'react-icons/bi'
 import { RiAddCircleFill } from 'react-icons/ri'
 import { IoEyeSharp, IoEyeOff } from 'react-icons/io5'
 import { SiVisa } from 'react-icons/si'
@@ -48,7 +48,7 @@ export const card: Card = {
         number: '5567 8901 2345 6789',
         expirationDate: '06/26',
         cvv: '456',
-        cardProvider: BiLogoMastercard,
+        cardProvider: SiVisa,
         cardVander: aspireLogo,
       },
       {
@@ -58,7 +58,7 @@ export const card: Card = {
         number: '3782 822463 10005',
         expirationDate: '09/24',
         cvv: '789',
-        cardProvider: BiLogoMastercard,
+        cardProvider: SiVisa,
         cardVander: aspireLogo,
       },
     ],
@@ -73,7 +73,7 @@ export const card: Card = {
         number: '5432 1234 5678 9330',
         expirationDate: '11/24',
         cvv: '456',
-        cardProvider: BiLogoMastercard,
+        cardProvider: SiVisa,
         cardVander: aspireLogo,
       },
     ],

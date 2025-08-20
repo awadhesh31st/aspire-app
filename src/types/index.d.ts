@@ -56,3 +56,14 @@ type Card = {
 type CardList = {
   cards: PaymentCard[]
 }
+
+type Carousel = {
+  items: unknown[]
+  children: React.ReactNode
+}
+
+type CarouselDots = {
+  total: number
+  current: number
+  onDotClick: (index: number) => void
+}
