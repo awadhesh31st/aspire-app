@@ -22,6 +22,11 @@ module.exports = {
           'mint-light': '#eefff5',
         },
       },
+      boxShadow: {
+        brand: {
+          top: '0 -2px 6px rgba(0,0,0,0.1)',
+        },
+      },
     },
   },
   plugins: [],
