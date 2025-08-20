@@ -28,6 +28,10 @@ const CarouselComponent: FC<Carousel> = ({
     setCurrentCard(currentIndex)
   }, [currentIndex, setCurrentCard])
 
+  useEffect(() => {
+    setCurrentIndex(0)
+  }, [items.length])
+
   const containerStyle = useMemo(
     () => ({
       transform: `translateX(-${currentIndex * 100}%)`,
@@ -59,6 +63,7 @@ const CarouselComponent: FC<Carousel> = ({
     },
     [currentIndex, items.length]
   )
+
   const handleDotClick = useCallback((index: number) => {
     setCurrentIndex(index)
   }, [])
@@ -67,7 +72,7 @@ const CarouselComponent: FC<Carousel> = ({
     <div className="w-full">
       <div className="relative overflow-hidden">
         <div
-          className="flex w-11/12"
+          className={`flex ${items?.length === 1 ? 'w-full px-4' : 'w-11/12'}`}
           style={containerStyle}
           onTouchStart={handleTouchStart}
         >

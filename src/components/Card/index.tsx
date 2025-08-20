@@ -3,8 +3,6 @@ import TabButtonComponent from '../../ui/TabButton'
 import { card } from '../../content'
 import CardListComponent from './CardList'
 
-type CardType = 'debit' | 'company'
-
 const CardComponent = memo(() => {
   const [activeCard, setActiveCard] = useState<CardType>('debit')
 
@@ -12,12 +10,10 @@ const CardComponent = memo(() => {
     setActiveCard(cardType)
   }, [])
 
-  const activeComponent = useMemo(() => {
-    const currentCards =
-      activeCard === 'debit' ? card.debit.cards : card.company.cards
-
-    return <CardListComponent cards={currentCards} />
-  }, [activeCard])
+  const currentCards = useMemo(
+    () => (activeCard === 'debit' ? card.debit.cards : card.company.cards),
+    [activeCard]
+  )
 
   const tabs = useMemo(
     () => [
@@ -41,7 +37,7 @@ const CardComponent = memo(() => {
             </TabButtonComponent>
           ))}
         </div>
-        {activeComponent}
+        <CardListComponent cards={currentCards} />
       </div>
     </div>
   )
