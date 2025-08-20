@@ -12,7 +12,7 @@ const App = () => {
         <HeaderComponent />
         <CardComponent />
       </div>
-      <div className="z-40">
+      <div className="z-40 h-full">
         <PaymentDetailComponent />
       </div>
       <NavigationComponent />

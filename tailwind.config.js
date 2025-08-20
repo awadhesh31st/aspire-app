@@ -22,11 +22,11 @@ module.exports = {
           'mint-light': '#eefff5',
           'midnight-teal': '#0a455c',
           'royal-blue-shade': '#3052ad',
+          'royal-light-blue': '#fafcff',
         },
       },
       boxShadow: {
-        custom:
-          '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+        card: '6px 6px 12px rgba(0,0,0,0.1), -6px -6px 12px rgba(255,255,255,0.8)',
       },
     },
   },

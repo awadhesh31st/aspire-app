@@ -73,3 +73,35 @@ type CarouselDots = {
 type PaymentCardHandle = {
   toggleCardNumber: () => void
 }
+
+type PaymentDetailAction = {
+  title: string
+  icon: IconType
+}
+
+type CardDetail = {
+  title: string
+  icon: IconType
+  detail: PaymentCard
+}
+
+type RecentTransactionDetail = {
+  transactionName: string
+  transactionType: 'credit' | 'debit'
+  transactionDate: string
+  transactionStatus: string
+  transactionStatusIcon: IconType
+  transactionIcon: IconType
+}
+
+type RecentTransaction = {
+  title: string
+  icon: IconType
+  transactionList: RecentTransactionDetail[]
+}
+
+type PaymentDetail = {
+  action: PaymentDetailAction[]
+  cardDetail: CardDetail
+  recentTransaction: RecentTransaction
+}

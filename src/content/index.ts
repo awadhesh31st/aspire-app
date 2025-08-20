@@ -5,6 +5,17 @@ import { BiTransferAlt } from 'react-icons/bi'
 import { RiAddCircleFill } from 'react-icons/ri'
 import { IoEyeSharp, IoEyeOff } from 'react-icons/io5'
 import { SiVisa } from 'react-icons/si'
+import { FaRegSnowflake } from 'react-icons/fa'
+import { ImMeter2 } from 'react-icons/im'
+import { IoMdRefreshCircle } from 'react-icons/io'
+import { MdDelete } from 'react-icons/md'
+import { FcGoogle } from 'react-icons/fc'
+import { FaBoxArchive } from 'react-icons/fa6'
+import { BiSolidPlaneAlt } from 'react-icons/bi'
+import { HiSpeakerphone } from 'react-icons/hi'
+import { IoCard } from 'react-icons/io5'
+import { BiDetail } from 'react-icons/bi'
+import { GrTransaction } from 'react-icons/gr'
 
 export const navigation: Navigation[] = [
   { title: 'Home', path: '/', icon: aspireGreenLogo },
@@ -85,4 +96,81 @@ export const cardAction: CardAction = {
   hideTitle: 'Hide card number',
   iconOn: IoEyeSharp,
   iconOff: IoEyeOff,
+}
+
+export const paymentDetail: PaymentDetail = {
+  action: [
+    {
+      title: 'Freeze card',
+      icon: FaRegSnowflake,
+    },
+    {
+      title: 'Set spend limit',
+      icon: ImMeter2,
+    },
+    {
+      title: 'Add to GPay',
+      icon: FcGoogle,
+    },
+    {
+      title: 'Replace card',
+      icon: IoMdRefreshCircle,
+    },
+    {
+      title: 'Cancel card',
+      icon: MdDelete,
+    },
+  ],
+  cardDetail: {
+    title: 'Card details',
+    icon: BiDetail,
+    detail: {
+      customerId: 'cust_123',
+      customerName: 'John Doe',
+      type: 'debit',
+      number: '3432 1234 5678 9010',
+      expirationDate: '12/25',
+      cvv: '123',
+      cardProvider: 'Visa',
+      cardVander: 'Aspire',
+    },
+  },
+  recentTransaction: {
+    title: 'Recent transactions',
+    icon: GrTransaction,
+    transactionList: [
+      {
+        transactionName: 'Hamleys',
+        transactionType: 'credit',
+        transactionDate: '2020-05-20T00:00:00Z',
+        transactionStatus: 'Refund on debit card',
+        transactionStatusIcon: IoCard,
+        transactionIcon: FaBoxArchive,
+      },
+      {
+        transactionName: 'Hamleys',
+        transactionType: 'debit',
+        transactionDate: '2020-05-20T00:00:00Z',
+        transactionStatus: 'Charged to debit card',
+        transactionStatusIcon: IoCard,
+        transactionIcon: BiSolidPlaneAlt,
+      },
+      {
+        transactionName: 'Hamleys',
+        transactionType: 'debit',
+        transactionDate: '2020-05-20T00:00:00Z',
+        transactionStatus: 'Charged to debit card',
+        transactionStatusIcon: IoCard,
+        transactionIcon: HiSpeakerphone,
+      },
+      {
+        transactionName: 'Hamleys',
+        transactionType: 'debit',
+        transactionDate: '2020-05-20T00:00:00Z',
+        transactionStatus: 'Charged to debit card',
+        transactionStatusIcon: IoCard,
+        transactionIcon: FaBoxArchive,
+      },
+    ],
+  },
 }

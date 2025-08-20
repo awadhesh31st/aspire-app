@@ -1,23 +1,28 @@
+import { paymentDetail } from '../../content'
+
 const PaymentDetailComponent = () => {
   return (
-    <div className="rounded-t-3xl bg-white">
-      <div className="p-4">
-        <div className="space-y-6">
-          <div className="space-y-6">
-            {Array.from({ length: 20 }).map((_, index) => {
-              return (
-                <div className="rounded-lg bg-gray-50 p-4">
-                  <h3 className="mb-2 font-medium">
-                    Transaction Summary {index}
-                  </h3>
-                  <p className="text-gray-600">
-                    Details about the transaction...
-                  </p>
-                </div>
-              )
-            })}
-          </div>
-          <div className="pb-8"></div>
+    <div className="h-full rounded-t-3xl bg-white">
+      <div className="flex flex-col gap-8 rounded-t-3xl">
+        <div className="flex items-center justify-around gap-2 rounded-t-3xl bg-brand-ice-blue px-3 py-5">
+          {paymentDetail.action.map((action: PaymentDetailAction) => {
+            return (
+              <div className="flex flex-col items-center justify-center gap-2 text-center text-brand-royal-blue">
+                <action.icon className="size-6" />
+                <span className="text-xs text-brand-dark-navy">
+                  {action.title}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+        <div className="mx-5 rounded-lg border border-gray-100 bg-brand-royal-light-blue px-4 py-3 shadow-card">
+          <paymentDetail.cardDetail.icon />
+          <span>{paymentDetail.cardDetail.title}</span>
+        </div>
+        <div className="mx-5 rounded-lg border border-gray-100 bg-brand-royal-light-blue px-4 py-3 shadow-card">
+          <paymentDetail.recentTransaction.icon />
+          <span>{paymentDetail.recentTransaction.title}</span>
         </div>
       </div>
     </div>
