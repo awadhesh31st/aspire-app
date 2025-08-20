@@ -1,5 +1,8 @@
-import { HeaderComponent, NavigationComponent } from './components'
-import CardComponent from './components/Card'
+import {
+  HeaderComponent,
+  NavigationComponent,
+  CardComponent,
+} from './components'
 
 const App = () => {
   return (
