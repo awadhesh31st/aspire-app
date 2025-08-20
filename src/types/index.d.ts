@@ -26,6 +26,7 @@ type Header = {
 }
 
 type PaymentCard = {
+  isCardActive?: boolean
   customerId: string
   customerName: string
   type: CardType
@@ -60,6 +61,7 @@ type CardList = {
 type Carousel = {
   items: unknown[]
   children: React.ReactNode
+  setCurrentCard: (cardId: number) => void
 }
 
 type CarouselDots = {

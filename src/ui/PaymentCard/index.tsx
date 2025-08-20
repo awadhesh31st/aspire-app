@@ -25,7 +25,9 @@ const PaymentCardComponent: FC<PaymentCard> = memo((props) => {
         </div>
       </div>
       <div className="rounded-b-xl rounded-tl-xl border-none bg-white">
-        <div className="flex flex-col gap-1 rounded-xl bg-brand-green px-4 pt-4">
+        <div
+          className={`flex flex-col gap-1 rounded-xl px-4 pt-4 ${props.isCardActive ? 'bg-brand-green' : 'bg-brand-royal-blue'}`}
+        >
           <span className="mb-4 flex items-center justify-end">
             <img
               src={props.cardVander}

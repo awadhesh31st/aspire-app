@@ -1,4 +1,4 @@
-import { FC, useCallback, useMemo, useState } from 'react'
+import { FC, useCallback, useEffect, useMemo, useState } from 'react'
 
 const CarouselDots: FC<CarouselDots> = ({ total, current, onDotClick }) => (
   <div className="mt-4 flex justify-center gap-2">
@@ -17,8 +17,16 @@ const CarouselDots: FC<CarouselDots> = ({ total, current, onDotClick }) => (
   </div>
 )
 
-const CarouselComponent: FC<Carousel> = ({ children, items }) => {
+const CarouselComponent: FC<Carousel> = ({
+  children,
+  items,
+  setCurrentCard,
+}) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
+
+  useEffect(() => {
+    setCurrentCard(currentIndex)
+  }, [currentIndex, setCurrentCard])
 
   const containerStyle = useMemo(
     () => ({

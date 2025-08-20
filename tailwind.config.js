@@ -21,6 +21,7 @@ module.exports = {
           'royal-blue': '#315baf',
           'mint-light': '#eefff5',
           'midnight-teal': '#0a455c',
+          'royal-blue-shade': '#3052ad',
         },
       },
       boxShadow: {
