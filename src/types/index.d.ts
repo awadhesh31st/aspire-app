@@ -85,13 +85,26 @@ type CardDetail = {
   detail: PaymentCard
 }
 
+type TransactionCategoryValue = {
+  bgcolor: string
+  txtColor: string
+  icon: IconType
+}
+
+type TransactionCategoryType = 'travel' | 'advancement' | 'shopping'
+
+type TransactionCategory = Record<
+  TransactionCategoryType,
+  TransactionCategoryValue
+>
+
 type RecentTransactionDetail = {
   transactionName: string
   transactionType: 'credit' | 'debit'
   transactionDate: string
   transactionStatus: string
-  transactionStatusIcon: IconType
-  transactionIcon: IconType
+  transactionCategory: TransactionCategoryType
+  transactionAmount: string
 }
 
 type RecentTransaction = {
@@ -104,4 +117,11 @@ type PaymentDetail = {
   action: PaymentDetailAction[]
   cardDetail: CardDetail
   recentTransaction: RecentTransaction
+}
+
+type CommonIcon = {
+  up: IconType
+  down: IconType
+  card: IconType
+  forward: IconType
 }

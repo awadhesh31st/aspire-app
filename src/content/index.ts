@@ -11,11 +11,13 @@ import { IoMdRefreshCircle } from 'react-icons/io'
 import { MdDelete } from 'react-icons/md'
 import { FcGoogle } from 'react-icons/fc'
 import { FaBoxArchive } from 'react-icons/fa6'
-import { BiSolidPlaneAlt } from 'react-icons/bi'
 import { HiSpeakerphone } from 'react-icons/hi'
 import { IoCard } from 'react-icons/io5'
 import { BiDetail } from 'react-icons/bi'
 import { GrTransaction } from 'react-icons/gr'
+import { FaCircleChevronUp, FaCircleChevronDown } from 'react-icons/fa6'
+import { ImAirplane } from 'react-icons/im'
+import { IoIosArrowForward } from 'react-icons/io'
 
 export const navigation: Navigation[] = [
   { title: 'Home', path: '/', icon: aspireGreenLogo },
@@ -144,33 +146,58 @@ export const paymentDetail: PaymentDetail = {
         transactionType: 'credit',
         transactionDate: '2020-05-20T00:00:00Z',
         transactionStatus: 'Refund on debit card',
-        transactionStatusIcon: IoCard,
-        transactionIcon: FaBoxArchive,
+        transactionCategory: 'shopping',
+        transactionAmount: '+S$ 150',
       },
       {
         transactionName: 'Hamleys',
         transactionType: 'debit',
         transactionDate: '2020-05-20T00:00:00Z',
         transactionStatus: 'Charged to debit card',
-        transactionStatusIcon: IoCard,
-        transactionIcon: BiSolidPlaneAlt,
+        transactionCategory: 'travel',
+        transactionAmount: '-S$ 150',
       },
       {
         transactionName: 'Hamleys',
         transactionType: 'debit',
         transactionDate: '2020-05-20T00:00:00Z',
         transactionStatus: 'Charged to debit card',
-        transactionStatusIcon: IoCard,
-        transactionIcon: HiSpeakerphone,
+        transactionCategory: 'advancement',
+        transactionAmount: '-S$ 150',
       },
       {
         transactionName: 'Hamleys',
         transactionType: 'debit',
         transactionDate: '2020-05-20T00:00:00Z',
         transactionStatus: 'Charged to debit card',
-        transactionStatusIcon: IoCard,
-        transactionIcon: FaBoxArchive,
+        transactionCategory: 'shopping',
+        transactionAmount: '-S$ 150',
       },
     ],
+  },
+}
+
+export const commonIcon: CommonIcon = {
+  up: FaCircleChevronUp,
+  down: FaCircleChevronDown,
+  card: IoCard,
+  forward: IoIosArrowForward,
+}
+
+export const category: TransactionCategory = {
+  travel: {
+    bgcolor: '#e5fbf7',
+    txtColor: '#00d6b6',
+    icon: ImAirplane,
+  },
+  advancement: {
+    bgcolor: '#feecf4',
+    txtColor: '#f25195',
+    icon: HiSpeakerphone,
+  },
+  shopping: {
+    bgcolor: '#e5f6ff',
+    txtColor: '#009dff',
+    icon: FaBoxArchive,
   },
 }
