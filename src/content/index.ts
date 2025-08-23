@@ -51,8 +51,7 @@ export const card: Card = {
         number: '3432 1234 5678 9010',
         expirationDate: '12/25',
         cvv: '123',
-        cardProvider: SiVisa,
-        cardVander: aspireLogo,
+        isFrozen: false,
       },
       {
         customerId: 'cust_124',
@@ -61,8 +60,7 @@ export const card: Card = {
         number: '5567 8901 2345 6789',
         expirationDate: '06/26',
         cvv: '456',
-        cardProvider: SiVisa,
-        cardVander: aspireLogo,
+        isFrozen: true,
       },
       {
         customerId: 'cust_125',
@@ -71,8 +69,7 @@ export const card: Card = {
         number: '3782 822463 10005',
         expirationDate: '09/24',
         cvv: '789',
-        cardProvider: SiVisa,
-        cardVander: aspireLogo,
+        isFrozen: false,
       },
     ],
   },
@@ -86,8 +83,7 @@ export const card: Card = {
         number: '5432 1234 5678 9330',
         expirationDate: '11/24',
         cvv: '456',
-        cardProvider: SiVisa,
-        cardVander: aspireLogo,
+        isFrozen: false,
       },
     ],
   },
@@ -133,8 +129,7 @@ export const paymentDetail: PaymentDetail = {
       number: '3432 1234 5678 9010',
       expirationDate: '12/25',
       cvv: '123',
-      cardProvider: 'Visa',
-      cardVander: 'Aspire',
+      isFrozen: false,
     },
   },
   recentTransaction: {
@@ -182,6 +177,8 @@ export const commonIcon: CommonIcon = {
   down: FaCircleChevronDown,
   card: IoCard,
   forward: IoIosArrowForward,
+  visa: SiVisa,
+  logo: aspireLogo,
 }
 
 export const category: TransactionCategory = {

@@ -1,5 +1,11 @@
 type CardType = 'debit' | 'company'
 
+type ApiResponse<T> = {
+  success: boolean
+  data: T
+  message?: string
+}
+
 type Tab = {
   isActive: boolean
   onClick: () => void
@@ -26,15 +32,13 @@ type Header = {
 }
 
 type PaymentCard = {
-  isCardActive?: boolean
+  isFrozen: boolean
   customerId: string
   customerName: string
   type: CardType
   number: string
   expirationDate: string
   cvv: string
-  cardProvider: IconType
-  cardVander: string
 }
 
 type CardDetails = {
@@ -56,12 +60,13 @@ type Card = {
 
 type CardList = {
   cards: PaymentCard[]
+  handleActiveCard: (cardId: number) => void
 }
 
 type Carousel = {
   items: unknown[]
   children: React.ReactNode
-  setCurrentCard: (cardId: number) => void
+  setCurrentCard?: (cardId: number) => void
 }
 
 type CarouselDots = {
@@ -124,4 +129,21 @@ type CommonIcon = {
   down: IconType
   card: IconType
   forward: IconType
+  visa: IconType
+  logo: string
+}
+
+type CardComponentProps = {
+  children: React.ReactNode
+  activeTab: CardType
+  setActiveTab: (card: CardType) => void
+}
+
+type PaymentDetailComponentProps = {
+  activeCard: PaymentCard
+  toggleFreeze: (cardId: string) => void
+}
+
+type RecentTransactionProps = {
+  activeCard: string
 }

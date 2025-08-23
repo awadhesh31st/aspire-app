@@ -25,7 +25,7 @@ const CarouselComponent: FC<Carousel> = ({
   const [currentIndex, setCurrentIndex] = useState<number>(0)
 
   useEffect(() => {
-    setCurrentCard(currentIndex)
+    setCurrentCard?.(currentIndex)
   }, [currentIndex, setCurrentCard])
 
   useEffect(() => {
