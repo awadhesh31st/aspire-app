@@ -7,6 +7,7 @@ import {
 } from './components'
 import CardListComponent from './components/Card/CardList'
 import { cardAPI, initializeDefaultCards } from './api'
+import AddCardModal from './components/AddCardModal'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState<CardType>('debit')
@@ -63,6 +64,21 @@ const App = () => {
     [cards]
   )
 
+  const handleAddCard = async (name: string) => {
+    setIsLoading(true)
+    try {
+      const response = await cardAPI.createCard(name)
+      if (response.success) {
+        setCards((prev) => [...prev, response.data])
+        setIsModalOpen(false)
+      }
+    } catch (error) {
+      console.error('Failed to add card:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   const handleActiveCard = (id: number) => {
     setActiveCard(cards[id])
   }
@@ -70,7 +86,7 @@ const App = () => {
   return (
     <main className="flex h-screen w-screen flex-col gap-5 bg-brand-dark-navy text-neutral-white md:flex-row md:bg-white">
       <div className="sticky top-0 flex flex-col gap-5">
-        <HeaderComponent />
+        <HeaderComponent openModal={() => setIsModalOpen(true)} />
         <CardComponent activeTab={activeTab} setActiveTab={handleTabClick}>
           <CardListComponent
             cards={cards}
@@ -87,6 +103,12 @@ const App = () => {
         </div>
       )}
       <NavigationComponent />
+      <AddCardModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSubmit={handleAddCard}
+        isLoading={isLoading}
+      />
     </main>
   )
 }

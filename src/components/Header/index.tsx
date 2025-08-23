@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import { header } from '../../content'
 
-const HeaderComponent = () => {
+const HeaderComponent: FC<HeaderComponentProps> = ({ openModal }) => {
   return (
     <header className="mt-6 flex flex-col gap-4 px-4 md:mt-0">
       <div className="flex items-end justify-between">
@@ -14,7 +15,10 @@ const HeaderComponent = () => {
           </span>
           <span className="text-base font-bold">{header.balance.amount}</span>
         </div>
-        <button className="flex items-center justify-between gap-1.5 text-xs text-brand-sky-blue">
+        <button
+          className="flex items-center justify-between gap-1.5 text-xs text-brand-sky-blue"
+          onClick={() => openModal()}
+        >
           <header.addCardButton.icon className="inline-block size-3 md:size-4" />
           <span className="font-semibold">{header.addCardButton.text}</span>
         </button>

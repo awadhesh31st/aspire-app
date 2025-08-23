@@ -147,3 +147,14 @@ type PaymentDetailComponentProps = {
 type RecentTransactionProps = {
   activeCard: string
 }
+
+type ModalProps = {
+  isOpen: boolean
+  onClose: () => void
+  onSubmit: (name: string) => void
+  isLoading: boolean
+}
+
+type HeaderComponentProps = {
+  openModal: () => void
+}
