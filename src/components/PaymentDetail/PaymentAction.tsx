@@ -15,7 +15,7 @@ const PaymentAction: FC<PaymentActionProps> = ({
               onClick={() => toggleFreeze(activeCard?.customerId)}
             >
               <action.icon className="size-6" />
-              <span className="w-3/4 text-xs capitalize text-brand-dark-navy">
+              <span className="text-xs capitalize text-brand-dark-navy md:w-3/4">
                 {`${activeCard.isFrozen ? 'un' : ''}${action.title}`}
               </span>
             </div>
@@ -24,7 +24,7 @@ const PaymentAction: FC<PaymentActionProps> = ({
         return (
           <div className="flex flex-col items-center justify-center gap-2 text-center text-brand-royal-blue">
             <action.icon className="size-6" />
-            <span className="w-3/4 text-xs text-brand-dark-navy">
+            <span className="text-xs text-brand-dark-navy md:w-3/4">
               {action.title}
             </span>
           </div>
