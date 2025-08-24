@@ -3,10 +3,10 @@ import { header } from '../../content'
 
 const HeaderComponent: FC<HeaderComponentProps> = ({ openModal }) => {
   return (
-    <header className="mt-6 flex flex-col gap-4 px-4 md:mt-0">
+    <header className="mt-6 flex flex-col gap-4 px-4 md:mt-0 md:gap-2 md:text-brand-dark-navy">
       <div className="flex items-end justify-between">
         <span className="text-xs font-medium">{header.title}</span>
-        <img src={header.logo} alt="Aspire Logo" className="size-6" />
+        <img src={header.logo} alt="Aspire Logo" className="size-6 md:hidden" />
       </div>
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-start gap-2">
@@ -16,7 +16,7 @@ const HeaderComponent: FC<HeaderComponentProps> = ({ openModal }) => {
           <span className="text-base font-bold">{header.balance.amount}</span>
         </div>
         <button
-          className="flex items-center justify-between gap-1.5 text-xs text-brand-sky-blue"
+          className="flex items-center justify-between gap-1.5 text-xs text-brand-sky-blue md:rounded-md md:bg-accent-royal-blue md:px-3 md:py-2 md:text-white"
           onClick={() => openModal()}
         >
           <header.addCardButton.icon className="inline-block size-3 md:size-4" />

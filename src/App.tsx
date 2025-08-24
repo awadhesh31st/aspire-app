@@ -138,7 +138,8 @@ const App = () => {
       {isMobile ? (
         <div className="sticky top-0 flex flex-col">{layout}</div>
       ) : (
-        <div className="flex-1 overflow-y-auto">
+        <div className="mx-4 flex-1 overflow-y-auto">
+          <div className="mx-4 mt-12">{header}</div>
           <div className="card-shadow m-8 rounded-lg p-6">
             <div className="flex gap-3 pb-4 pl-4 md:flex-row">{layout}</div>
           </div>

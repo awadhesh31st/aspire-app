@@ -16,13 +16,10 @@ const PaymentCardComponent: FC<PaymentCard> = memo((props) => {
     : props.number
 
   return (
-    <div
-      className="flex w-full flex-col gap-0 md:gap-1"
-      data-card-id={props.customerId}
-    >
+    <div className="flex w-full flex-col" data-card-id={props.customerId}>
       <div className="flex-end flex w-full items-center justify-end border-none bg-brand-dark-navy md:bg-white">
         <div
-          className={`flex items-center justify-start gap-2 rounded-t-xl bg-white px-3 py-1 text-xs font-medium ${!props.isFrozen ? 'text-brand-green' : 'text-brand-royal-blue'}`}
+          className={`flex items-center justify-start gap-2 rounded-t-xl bg-white px-3 py-1 text-xs font-medium md:py-2 ${!props.isFrozen ? 'text-brand-green' : 'text-brand-royal-blue'}`}
         >
           <Icon className="size-4" />
           <button onClick={handleToggleCardNumber} type="button">

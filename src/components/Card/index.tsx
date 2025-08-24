@@ -13,7 +13,7 @@ const CardComponent: FC<CardComponentProps> = memo(
     )
 
     return (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 md:mt-5">
         <div className="flex flex-col gap-5">
           <div className="flex items-center justify-start gap-5 px-4">
             {tabs.map(({ type, title }) => (
