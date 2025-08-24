@@ -3,7 +3,7 @@ import TabButtonComponent from '../../ui/TabButton'
 import { card } from '../../content'
 
 const CardComponent: FC<CardComponentProps> = memo(
-  ({ children, activeTab, setActiveTab }) => {
+  ({ activeTab, setActiveTab }) => {
     const tabs = useMemo(
       () => [
         { type: 'debit' as CardType, title: card.debit.title },
@@ -26,7 +26,6 @@ const CardComponent: FC<CardComponentProps> = memo(
               </TabButtonComponent>
             ))}
           </div>
-          {children}
         </div>
       </div>
     )

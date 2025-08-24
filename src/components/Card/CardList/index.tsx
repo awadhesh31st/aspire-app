@@ -10,7 +10,9 @@ const CardListComponent: FC<CardList> = ({ cards, handleActiveCard }) => {
           key={card.customerId}
           className={`flex w-full flex-shrink-0 justify-end`}
         >
-          <div className={`flex ${cards?.length === 1 ? 'w-full' : 'w-[95%]'}`}>
+          <div
+            className={`flex ${cards?.length === 1 ? 'w-full' : 'w-[95%] md:w-full'}`}
+          >
             <PaymentCardComponent {...card} />
           </div>
         </div>

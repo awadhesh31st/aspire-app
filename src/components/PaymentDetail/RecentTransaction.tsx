@@ -16,7 +16,7 @@ const RecentTransactionComponent: FC<RecentTransactionProps> = memo(
     }, [activeCard])
 
     return (
-      <div className="bg-white" id={activeCard}>
+      <div className="cursor-pointer bg-white" id={activeCard}>
         <div
           className="flex items-center justify-between rounded-lg border border-gray-100 bg-[#fafcff] p-4 text-brand-dark-navy shadow-01"
           onClick={() => setRecentTransaction((p) => !p)}

@@ -134,14 +134,12 @@ type CommonIcon = {
 }
 
 type CardComponentProps = {
-  children: React.ReactNode
   activeTab: CardType
   setActiveTab: (card: CardType) => void
 }
 
 type PaymentDetailComponentProps = {
   activeCard: PaymentCard
-  toggleFreeze: (cardId: string) => void
 }
 
 type RecentTransactionProps = {
@@ -157,4 +155,9 @@ type ModalProps = {
 
 type HeaderComponentProps = {
   openModal: () => void
+}
+
+type PaymentActionProps = {
+  activeCard: PaymentCard
+  toggleFreeze: (cardId: string) => void
 }

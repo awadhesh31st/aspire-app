@@ -8,6 +8,8 @@ import {
 import CardListComponent from './components/Card/CardList'
 import { cardAPI, initializeDefaultCards } from './api'
 import AddCardModal from './components/AddCardModal'
+import { useIsMobile } from './hooks/useIsMobile'
+import PaymentAction from './components/PaymentDetail/PaymentAction'
 
 const App = () => {
   const [activeTab, setActiveTab] = useState<CardType>('debit')
@@ -15,7 +17,9 @@ const App = () => {
   const [activeCard, setActiveCard] = useState<PaymentCard>()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const [isInitialLoading, setIsInitialLoading] = useState(true)
+  const [_, setIsInitialLoading] = useState(true)
+
+  const isMobile = useIsMobile()
 
   useEffect(() => {
     const loadCards = async () => {
@@ -83,26 +87,65 @@ const App = () => {
     setActiveCard(cards[id])
   }
 
-  return (
-    <main className="flex h-screen w-screen flex-col gap-5 bg-brand-dark-navy text-neutral-white md:flex-row md:bg-white">
-      <div className="sticky top-0 flex flex-col gap-5">
-        <HeaderComponent openModal={() => setIsModalOpen(true)} />
-        <CardComponent activeTab={activeTab} setActiveTab={handleTabClick}>
-          <CardListComponent
-            cards={cards}
-            handleActiveCard={handleActiveCard}
-          />
-        </CardComponent>
-      </div>
-      {activeCard && (
-        <div className="z-40 h-full">
-          <PaymentDetailComponent
+  const header = (
+    <>
+      <HeaderComponent openModal={() => setIsModalOpen(true)} />
+      <CardComponent activeTab={activeTab} setActiveTab={handleTabClick} />
+    </>
+  )
+
+  const activeDetail = activeCard && (
+    <div className="z-40 h-full">
+      <div className="h-full rounded-t-3xl bg-white">
+        <div className="flex flex-col gap-8 rounded-t-3xl pb-24">
+          <PaymentAction
             activeCard={activeCard}
             toggleFreeze={handleToggleFreeze}
           />
+          <PaymentDetailComponent activeCard={activeCard} />
+        </div>
+      </div>
+    </div>
+  )
+
+  const layout = (
+    <>
+      <div className="md:flex md:w-1/2 md:flex-col md:gap-8">
+        {isMobile && header}
+        <CardListComponent cards={cards} handleActiveCard={handleActiveCard} />
+        {!isMobile && activeCard && (
+          <PaymentAction
+            activeCard={activeCard}
+            toggleFreeze={handleToggleFreeze}
+          />
+        )}
+      </div>
+      {!isMobile && activeCard && (
+        <div className="md:w-1/2">
+          <PaymentDetailComponent activeCard={activeCard} />
         </div>
       )}
-      <NavigationComponent />
+    </>
+  )
+
+  return (
+    <main className="flex h-screen w-screen flex-col gap-5 bg-brand-dark-navy text-neutral-white md:flex-row md:gap-0 md:bg-white">
+      {!isMobile && (
+        <div className="md:w-2/12">
+          <NavigationComponent />
+        </div>
+      )}
+      {isMobile ? (
+        <div className="sticky top-0 flex flex-col">{layout}</div>
+      ) : (
+        <div className="flex-1 overflow-y-auto">
+          <div className="card-shadow m-8 rounded-lg p-6">
+            <div className="flex gap-3 pb-4 pl-4 md:flex-row">{layout}</div>
+          </div>
+        </div>
+      )}
+      {isMobile && activeDetail}
+      {isMobile && <NavigationComponent />}
       <AddCardModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
