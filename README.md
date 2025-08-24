@@ -2,11 +2,6 @@
 
 🔗 **Live Demo**: [Aspire App](https://aspire-app-sooty.vercel.app/)
 
-<img width="1710" height="957" alt="Screenshot 2025-08-24 at 4 58 28 PM" src="https://github.com/user-attachments/assets/7a03c068-f6cb-402b-9f25-939744d082cf" />
-<img width="1125" height="2436" alt="IMG_0705" src="https://github.com/user-attachments/assets/c4713a85-3d3b-47d4-8cb4-1f5360c0e2fa" />
-<img width="1125" height="2436" alt="IMG_0706" src="https://github.com/user-attachments/assets/22099c74-2039-4406-b756-496fa3802398" />
-
-
 ---
 
 ## 📌 Overview
@@ -15,6 +10,11 @@ It simulates a card management system where users can **add new cards** and **fr
 
 The app is built using **React + TypeScript** and follows modern best practices with clean, maintainable code.  
 Dummy data is served via an **API-like architecture** (mocked within the app), and card states are persisted using **localStorage**.
+
+
+<img width="1710" height="957" alt="Screenshot 2025-08-24 at 4 58 28 PM" src="https://github.com/user-attachments/assets/7a03c068-f6cb-402b-9f25-939744d082cf" />
+<img width="1125" height="2436" alt="IMG_0705" src="https://github.com/user-attachments/assets/c4713a85-3d3b-47d4-8cb4-1f5360c0e2fa" />
+<img width="1125" height="2436" alt="IMG_0706" src="https://github.com/user-attachments/assets/22099c74-2039-4406-b756-496fa3802398" />
 
 ---
 
