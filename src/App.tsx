@@ -110,7 +110,7 @@ const App = () => {
 
   const layout = (
     <>
-      <div className="md:flex md:w-1/2 md:flex-col md:gap-8">
+      <div className="flex flex-col gap-4 md:w-1/2 md:flex-col md:gap-8">
         {isMobile && header}
         <CardListComponent cards={cards} handleActiveCard={handleActiveCard} />
         {!isMobile && activeCard && (
