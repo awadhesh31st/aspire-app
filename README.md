@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Aspire Card Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🔗 **Live Demo**: [Aspire App](https://aspire-app-sooty.vercel.app/)
 
-## Available Scripts
+<img width="1710" height="957" alt="Screenshot 2025-08-24 at 4 58 28 PM" src="https://github.com/user-attachments/assets/7a03c068-f6cb-402b-9f25-939744d082cf" />
+<img width="1125" height="2436" alt="IMG_0705" src="https://github.com/user-attachments/assets/c4713a85-3d3b-47d4-8cb4-1f5360c0e2fa" />
+<img width="1125" height="2436" alt="IMG_0706" src="https://github.com/user-attachments/assets/22099c74-2039-4406-b756-496fa3802398" />
 
-In the project directory, you can run:
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📌 Overview
+This project is a **frontend coding challenge** that brings interactivity and dynamic behavior to the provided CSS UI.  
+It simulates a card management system where users can **add new cards** and **freeze/unfreeze existing ones**.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The app is built using **React + TypeScript** and follows modern best practices with clean, maintainable code.  
+Dummy data is served via an **API-like architecture** (mocked within the app), and card states are persisted using **localStorage**.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Features
+- **Initial Cards**: App loads with a few pre-existing cards.
+- **Add New Card**:
+  - Opens a modal where user enters the **card name**.
+  - **Card number** and **expiry date** are randomly generated.
+  - Card is appended to the **carousel of cards**.
+- **Freeze/Unfreeze Card**:
+  - Clicking **Freeze** changes the card to a “frozen” state (with opacity styling).
+  - Button toggles to **Unfreeze** when frozen.
+  - Cards can be frozen/unfrozen any time.
+- **TypeScript** with proper types/interfaces.
+- **Local Persistence** with `localStorage`.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
+- **React** (Frontend framework)
+- **TypeScript** (Static typing)
+- **Tailwind CSS** (Styling, responsive UI)
+- **LocalStorage** (Persistence)
+- **Vercel** (Deployment)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📂 Project Structure
